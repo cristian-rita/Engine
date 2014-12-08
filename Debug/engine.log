@@ -1,8 +1,11 @@
-﻿Build started 12/9/2014 12:11:31 AM.
+﻿Build started 12/9/2014 1:06:40 AM.
      1>Project "C:\Users\Sorin\Documents\Visual Studio 2013\Projects\engine\engine\engine.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt systemclass.cpp
-         systemclass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt graphicsclass.cpp
+         graphicsclass.cpp
+     1>c:\users\sorin\documents\visual studio 2013\projects\engine\engine\graphicsclass.cpp(69): warning C4244: '=' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>c:\users\sorin\documents\visual studio 2013\projects\engine\engine\graphicsclass.cpp(70): warning C4244: '=' : conversion from 'int' to 'FLOAT', possible loss of data
+     1>c:\users\sorin\documents\visual studio 2013\projects\engine\engine\graphicsclass.cpp(81): warning C4305: '+=' : truncation from 'double' to 'float'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sorin\Documents\Visual Studio 2013\Projects\engine\Debug\engine.exe" /INCREMENTAL /NOLOGO d3d11.lib dxgi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sorin\Documents\Visual Studio 2013\Projects\engine\Debug\engine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sorin\Documents\Visual Studio 2013\Projects\engine\Debug\engine.lib" /MACHINE:X86 Debug\graphicsclass.obj
          Debug\inputclass.obj
@@ -13,4 +16,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.76
+Time Elapsed 00:00:00.87

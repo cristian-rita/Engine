@@ -110,7 +110,7 @@ bool SystemClass::Frame()
 		return false;
 	}
 	/*Do the frame processing*/
-	result = m_Graphics->Frame();
+	result = m_Graphics->RenderFrame();
 	if (!result)
 	{
 		return false;

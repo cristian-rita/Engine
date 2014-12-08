@@ -4,6 +4,7 @@
 #include <d3d11.h>
 #include <windowsx.h>
 
+
 #pragma comment(lib,"d3d11.lib")
 
 
@@ -18,6 +19,9 @@ public:
 	IDXGISwapChain *swapchain;             // the pointer to the swap chain interface
 	ID3D11Device *dev;                     // the pointer to our Direct3D device interface
 	ID3D11DeviceContext *devcon;           // the pointer to our Direct3D device context
+	ID3D11RenderTargetView *backbuffer;   
+	float color[4]; 
+
 public:
 	GraphicsClass();
 	GraphicsClass(const GraphicsClass&);
@@ -25,9 +29,7 @@ public:
 
 	bool Initialize(int, int, HWND);
 	void Shutdown();
-	bool Frame();
+	bool RenderFrame();
 
-private:
-	bool Render();
 };
 #endif // !_GRAPHICSCLASS_H_
