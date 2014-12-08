@@ -21,8 +21,8 @@ bool SystemClass::Initialize()
 	int screenWidth, screenHeight;
 	bool result;
 
-	screenWidth = 0;
-	screenHeight = 0;
+	screenWidth = 600;
+	screenHeight = 600;
 
 	/*Initialize windows API*/
 
@@ -144,7 +144,7 @@ void SystemClass::InitializeWindows(int screenWidth,int screenHeight)
 {
 	WNDCLASSEX wc;
 	DEVMODE dmScreenSettings;
-	int	posX= 0, posY =0;
+	int	posX = 0, posY = 0;
 
 	/*Get an external pointer to this object*/
 	ApplicationHandle = this;
@@ -172,13 +172,14 @@ void SystemClass::InitializeWindows(int screenWidth,int screenHeight)
 
 	RegisterClassEx(&wc);
 
-	/*Determine resolution */
-
-	screenWidth = GetSystemMetrics(SM_CXSCREEN);
-	screenHeight = GetSystemMetrics(SM_CYSCREEN);
+	
 
 	if (FULL_SCREEN)
 	{
+		/*Determine resolution */
+		screenWidth = GetSystemMetrics(SM_CXSCREEN);
+		screenHeight = GetSystemMetrics(SM_CYSCREEN);
+
 		/*If full screen set the screen to the maximum size*/
 		memset(&dmScreenSettings, 0, sizeof(dmScreenSettings));
 		dmScreenSettings.dmSize = sizeof(dmScreenSettings);
@@ -196,9 +197,8 @@ void SystemClass::InitializeWindows(int screenWidth,int screenHeight)
 	}
 	else 
 	{
-		/*If windowed set it to 800 per 600*/
-		screenHeight = 750;
-		screenWidth = 800;
+		//screenHeight = 750;
+		//screenWidth = 800;
 
 		/*Place window in the middle of the screen*/
 		posX = (GetSystemMetrics(SM_CXSCREEN) - screenWidth) / 2;

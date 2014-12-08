@@ -21,6 +21,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	color[1] = 0.2f;
 	color[2] = 0.0f;
 	color[3] = 0.0f; 
+
 	/*Create a struct to hold the info about swap chain*/
 	DXGI_SWAP_CHAIN_DESC scd;
 
